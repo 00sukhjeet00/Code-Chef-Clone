@@ -1,0 +1,11 @@
+.main{
+    background-color: red;
+    flex:1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    background-color: aqua;
+    width:60%;
+}
