@@ -1,28 +1,20 @@
-import { ThemeProvider,createTheme } from "@mui/material/styles";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./Component/Navbar";
 import HomeScreen from "./Screen/Home";
-const theme=createTheme({
-  palette: {
-    type: 'dark',
-    primary: {
-      main: '#0a1929',
-    },
-    secondary: {
-      main: '#f50057',
-    },
-  },
-})
+import LoginScreen from "./Screen/Login";
+import ProfileScreen from "./Screen/Profile";
 function App() {
   return (
-    <ThemeProvider theme={theme}>
       <BrowserRouter>
         <Navbar />
-        <Routes>
-          <Route path="/" element={<HomeScreen />} />
-        </Routes>
+        <div className="container">
+          <Routes>
+            <Route path="/" element={<HomeScreen />} />
+            <Route path="/login" element={<LoginScreen />} />
+            <Route path="/profile" element={<ProfileScreen />} />
+          </Routes>
+        </div>
       </BrowserRouter>
-    </ThemeProvider>
   );
 }
 
