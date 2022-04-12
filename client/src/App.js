@@ -3,6 +3,9 @@ import Navbar from "./Component/Navbar";
 import HomeScreen from "./Screen/Home";
 import LoginScreen from "./Screen/Login";
 import ProfileScreen from "./Screen/Profile";
+import PracticeScreen from "./Screen/Practice";
+import ContestScreen from "./Screen/Contest";
+
 function App() {
   return (
       <BrowserRouter>
@@ -12,6 +15,8 @@ function App() {
             <Route path="/" element={<HomeScreen />} />
             <Route path="/login" element={<LoginScreen />} />
             <Route path="/profile" element={<ProfileScreen />} />
+            <Route path="/practice" element={<PracticeScreen />} />
+            <Route path="/contest" element={<ContestScreen/>} />
           </Routes>
         </div>
       </BrowserRouter>
