@@ -44,7 +44,7 @@ const Navbar = () => {
               </a>
             </li>
           </ul>
-          <button type="button" class="btn btn-primary btn-sm">Login</button>
+          <a href="/login" class="btn btn-primary">Login</a>
         </div>
       </div>
     </nav>

@@ -1,10 +1,11 @@
 import React, { useState } from "react";
+import Table from "../../../Component/Table";
 
-export default function ContestComponent() {
-  const [tab, setTab] = useState(0)
+export default function ContestComponent(props) {
+  const [tab, setTab] = useState(0);
   return (
-    <div>
-      <ul className="nav nav-pills nav-fill">
+    <div >
+      <ul className="nav nav-pills nav-fill m-3"> 
         <li className="nav-item">
           <button
             className={`nav-link ${tab === 0 && "active"}`}
@@ -37,6 +38,9 @@ export default function ContestComponent() {
           </button>
         </li>
       </ul>
+      <div>
+       <Table data={props.data}/>
+      </div>
     </div>
   );
 }
