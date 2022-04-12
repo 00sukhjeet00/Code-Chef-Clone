@@ -60,7 +60,7 @@ export default function PracticeComponent() {
             </ul>
           </nav>
         </div>
-        <div className="col-2 bg-dark">Blank</div>
+        <div className="col-2">Blank</div>
       </div>
   );
 }

@@ -1,11 +1,42 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default function ContestComponent() {
+  const [tab, setTab] = useState(0)
   return (
-      <div className="main">
-        <div className="w-30 ">
-          <img src="https://contestalert.in/wp-content/uploads/2021/02/twitter-contest-SoundcoreIndia-1364261558768054274.jpg"/>
-        </div>
-      </div>
+    <div>
+      <ul className="nav nav-pills nav-fill">
+        <li className="nav-item">
+          <button
+            className={`nav-link ${tab === 0 && "active"}`}
+            onClick={() => {
+              setTab(0);
+            }}
+          >
+            Past
+          </button>
+        </li>
+        <li className="nav-item">
+          <button
+            className={`nav-link ${tab === 1 && "active"}`}
+            aria-current="page"
+            onClick={() => {
+              setTab(1);
+            }}
+          >
+            Active
+          </button>
+        </li>
+        <li className="nav-item">
+          <button
+            className={`nav-link ${tab === 2 && "active"}`}
+            onClick={() => {
+              setTab(2);
+            }}
+          >
+            Upcoming
+          </button>
+        </li>
+      </ul>
+    </div>
   );
 }
