@@ -6,6 +6,7 @@ import ProfileScreen from "./Screen/Profile";
 import PracticeScreen from "./Screen/Practice";
 import ContestScreen from "./Screen/Contest";
 import RegisterScreen from './Screen/Register'
+import DashboardScreen from "./Dashboard";
 function App() {
   return (
       <BrowserRouter>
@@ -13,6 +14,7 @@ function App() {
         <div className="container-fluid">
           <Routes>
             <Route path="/" element={<HomeScreen />} />
+            <Route path="/dashboard" element={<DashboardScreen/>}/>
             <Route path="/login" element={<LoginScreen />} />
             <Route path="/register" element={<RegisterScreen/>}/>
             <Route path="/profile" element={<ProfileScreen />} />
