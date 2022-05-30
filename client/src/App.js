@@ -5,24 +5,30 @@ import LoginScreen from "./Screen/Login";
 import ProfileScreen from "./Screen/Profile";
 import PracticeScreen from "./Screen/Practice";
 import ContestScreen from "./Screen/Contest";
-import RegisterScreen from './Screen/Register'
+import RegisterScreen from "./Screen/Register";
 import DashboardScreen from "./Dashboard";
+import SideBar from "./Component/SideBar";
 function App() {
   return (
+    <div class="container-scroller">
       <BrowserRouter>
-        <Navbar />
-        <div className="container-fluid">
-          <Routes>
-            <Route path="/" element={<HomeScreen />} />
-            <Route path="/dashboard" element={<DashboardScreen/>}/>
-            <Route path="/login" element={<LoginScreen />} />
-            <Route path="/register" element={<RegisterScreen/>}/>
-            <Route path="/profile" element={<ProfileScreen />} />
-            <Route path="/practice" element={<PracticeScreen />} />
-            <Route path="/contest" element={<ContestScreen/>} />
-          </Routes>
+        <SideBar />
+        <div class="container-fluid page-body-wrapper">
+          <Navbar />
+          <div class="main-panel">
+            <Routes>
+              <Route path="/" element={<HomeScreen />} />
+              <Route path="/dashboard" element={<DashboardScreen />} />
+              <Route path="/login" element={<LoginScreen />} />
+              <Route path="/register" element={<RegisterScreen />} />
+              <Route path="/profile" element={<ProfileScreen />} />
+              <Route path="/practice" element={<PracticeScreen />} />
+              <Route path="/contest" element={<ContestScreen />} />
+            </Routes>
+          </div>
         </div>
       </BrowserRouter>
+    </div>
   );
 }
 

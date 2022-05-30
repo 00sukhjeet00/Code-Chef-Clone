@@ -3,7 +3,7 @@ import React from "react";
 export default function Home() {
   return (
     <>
-      <p>Hello world</p>
+      <p style={{color:"#fff"}}>Hello world</p>
     </>
   );
 }
