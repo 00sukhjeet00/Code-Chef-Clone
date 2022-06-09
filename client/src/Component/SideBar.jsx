@@ -63,7 +63,7 @@ export default function SideBar() {
         <span className="nav-link">Navigation</span>
       </li>
       <li className="nav-item menu-items">
-        <a className="nav-link" href="index.html">
+        <a className="nav-link" href="/dashboard">
           <span className="menu-icon">
             <i className="mdi mdi-speedometer" />
           </span>
@@ -71,7 +71,7 @@ export default function SideBar() {
         </a>
       </li>
       <li className="nav-item menu-items">
-        <a className="nav-link" href="pages/forms/basic_elements.html">
+        <a className="nav-link" href="/contest">
           <span className="menu-icon">
             <i className="mdi mdi-playlist-play" />
           </span>
@@ -79,21 +79,21 @@ export default function SideBar() {
         </a>
       </li>
       <li className="nav-item menu-items">
-        <a className="nav-link" href="pages/tables/basic-table.html">
+        <a className="nav-link" href="/practice">
           <span className="menu-icon">
             <i className="mdi mdi-table-large" />
           </span>
           <span className="menu-title">Pratice</span>
         </a>
       </li>
-      <li className="nav-item menu-items">
+      {/* <li className="nav-item menu-items">
         <a className="nav-link" href="pages/charts/chartjs.html">
           <span className="menu-icon">
             <i className="mdi mdi-vector-point" />
           </span>
           <span className="menu-title">Leaderboard</span>
         </a>
-      </li>
+      </li> */}
     </ul>
   </nav>
   )

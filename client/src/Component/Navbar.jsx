@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <nav className="navbar p-0 fixed-top d-flex flex-row">
       <div className="navbar-brand-wrapper d-flex d-lg-none align-items-center justify-content-center">
-        <a className="navbar-brand brand-logo-mini" href="index.html">
+        <a className="navbar-brand brand-logo-mini" href="/">
           <img src="assets/images/logo-mini.svg" alt="logo" />
         </a>
       </div>
@@ -32,7 +32,7 @@ const Navbar = () => {
         </ul>
         <ul className="navbar-nav navbar-nav-right">
           <li className="nav-item nav-settings d-none d-lg-block">
-            <a className="nav-link" href="#">
+            <a className="nav-link" href="/dashboard">
               <span className="menu-icon">
                 <i className="mdi mdi-speedometer" />
               </span>
@@ -40,14 +40,12 @@ const Navbar = () => {
           </li>
           <li className="nav-item dropdown border-left">
             <a
-              className="nav-link count-indicator dropdown-toggle"
+              className="nav-link count-indicator"
               id="messageDropdown"
-              href="#"
-              data-toggle="dropdown"
-              aria-expanded="false"
+              href="/practice"
             >
               <span className="menu-icon">
-                <i className="mdi mdi-laptop" />
+              <i className="mdi mdi-table-large" />
               </span>
             </a>
           </li>
@@ -55,12 +53,12 @@ const Navbar = () => {
             <a
               className="nav-link count-indicator dropdown-toggle"
               id="messageDropdown"
-              href="#"
+              href="/contest"
               data-toggle="dropdown"
               aria-expanded="false"
             >
               <span className="menu-icon">
-                <i className="mdi mdi-vector-point" />
+              <i className="mdi mdi-playlist-play" />
               </span>
             </a>
           </li>
