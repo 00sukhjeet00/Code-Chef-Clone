@@ -6,8 +6,9 @@ import ProfileScreen from "./Screen/Profile";
 import PracticeScreen from "./Screen/Practice";
 import ContestScreen from "./Screen/Contest";
 import RegisterScreen from "./Screen/Register";
-import DashboardScreen from "./Dashboard";
+import DashboardScreen from "./Screen/Dashboard";
 import SideBar from "./Component/SideBar";
+import QuestionScreen from "./Screen/Question";
 function App() {
   return (
     <div class="container-scroller">
@@ -24,6 +25,7 @@ function App() {
               <Route path="/profile" element={<ProfileScreen />} />
               <Route path="/practice" element={<PracticeScreen />} />
               <Route path="/contest" element={<ContestScreen />} />
+              <Route path="/question" element={<QuestionScreen />} />
             </Routes>
           </div>
         </div>

@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@mdi/font": "^3.7.95",
+    "@monaco-editor/react": "^4.4.5",
     "axios": "^0.26.0",
     "bootstrap": "^4.4.1",
     "bootstrap-maxlength": "^1.6.0",
