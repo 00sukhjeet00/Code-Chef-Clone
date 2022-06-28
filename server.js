@@ -6,7 +6,7 @@ const mongoose = require('mongoose')
 const userRoute = require('./route/user')
 app.use(express.json())
 app.use(cors())
-mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.2cqlb.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`)
+mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.2cqlb.mongodb.net/?retryWrites=true&w=majority`)
     .then(res => {
         console.log("DB Connected")
     })

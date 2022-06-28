@@ -1,22 +1,21 @@
 import React from "react";
-import "./styles.css";
 import {Link} from 'react-router-dom'
+import './styles.css'
 export default function LoginComponent(props) {
   return (
-    <main className="main text-center">
+    <main className="main">
       <form className="form-signin" style={{ width: "40%" }}>
-        <h1 className="h3 mb-3 fw-normal">Login</h1>
+        <h1 className="h3 mb-3 fw-normal text-center">LOGIN</h1>
 
         <div className="form-floating mb-3">
           <input
             type="email"
             className="form-control"
             id="floatingInput"
-            placeholder="name@example.com"
-            value={props.email}
-            onChange={e=>props.setemail(e.target.value)}
+            placeholder="Email"
+            value={props.state.email}
+            onChange={e=>props.setstate({...props.state,email:e.target.value})}
           />
-          <label for="floatingInput">Email address</label>
         </div>
         <div className="form-floating mb-3">
           <input
@@ -24,15 +23,14 @@ export default function LoginComponent(props) {
             className="form-control"
             id="floatingPassword"
             placeholder="Password"
-            value={props.password}
-            onChange={e=>props.setpassword(e.target.value)}
+            value={props.state.password}
+            onChange={e=>props.setstate({...props.state,password:e.target.value})}
           />
-          <label for="floatingPassword">Password</label>
         </div>
-        <div style={{marginBottom:"10px",float:"right"}}>
+        {/* <div style={{marginBottom:"10px",float:"right"}}>
             <a href='/forgetPassword'>Forget Password?</a>
-          </div>
-        <button className="w-100 btn btn-lg btn-primary" type="submit">
+          </div> */}
+        <button className="w-100 btn btn-lg btn-primary" type="button" onClick={(e)=>props.handleLogin(e)}>
           Sign in
         </button>
         <p className="mt-5 mb-3 text-muted">
