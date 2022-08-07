@@ -1,10 +1,31 @@
 import React, { useState } from "react";
 import Editor from "@monaco-editor/react";
 
-let cpp =
-  '#include<iostream>\nusing namespace std;\nint main()\n{\ncout<<"Hello World";\n}\n';
+let cpp = '#include<iostream>\nusing namespace std;\nint main()\n{\ncout<<"Hello World";\n}\n';
+let java = 
+`import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+  public static void main (String[] args) throws java.lang.Exception
+  {
+    // your code goes here
+  }
+}`
+let python = `# cook your dish here`
+let c = 
+`#include <stdio.h>
+
+int main(void) {
+  // your code goes here
+  return 0;
+}`
+
 export default function Question() {
-  const [code, setcode] = useState(cpp);
+  const [code, setcode] = useState(c);
   const [lang, setlang] = useState("cpp");
   return (
     <div class="d-flex">
@@ -58,25 +79,23 @@ export default function Question() {
               aria-haspopup="true"
               aria-expanded="false"
             >
-              Dropdown
+              {lang}
             </button>
             <div
               class="dropdown-menu"
               aria-labelledby="dropdownMenuOutlineButton6"
             >
-              <h6 class="dropdown-header">Settings</h6>
-              <a class="dropdown-item" href="#">
-                Action
+              <a class="dropdown-item" onClick={()=>{setcode(c); setlang("c")}} href="#">
+                C
               </a>
-              <a class="dropdown-item" href="#">
-                Another action
+              <a class="dropdown-item" onClick={()=>{setcode(cpp); setlang("cpp")}} href="#">
+                CPP
               </a>
-              <a class="dropdown-item" href="#">
-                Something else here
+              <a class="dropdown-item" onClick={()=>{setcode(python); setlang("python")}} href="#">
+                PYTHON
               </a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">
-                Separated link
+              <a class="dropdown-item" onClick={()=>{setcode(java); setlang("java")}} href="#">
+                JAVA
               </a>
             </div>
           </div>
@@ -87,6 +106,8 @@ export default function Question() {
           width="100%"
           defaultLanguage={lang}
           defaultValue={code}
+          language={lang}
+          value={code}
           theme={"vs-dark"}
         />
       </div>
