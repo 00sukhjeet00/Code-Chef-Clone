@@ -1,9 +1,10 @@
-const jwt = require('jsonwebtoken')
-const bcrypt = require('bcrypt')
-const User = require('../model/user')
-const validator=require('validator')
-const register = async(req,res) => {
-    const { email, password, username, name } = req.body
+import jwt from 'jsonwebtoken'
+import bcrypt from 'bcrypt'
+import {User} from '../model/user.js'
+import validator from 'validator'
+
+export const register = async(req,res) => {
+    const { email, password, username, name,country } = req.body
     if (!email || !password || !username || !name)
     {
         return res.status(400).json({msg:"Please Enter all Field"})    
@@ -14,7 +15,7 @@ const register = async(req,res) => {
         {
             try {
                 const hashedPassword=bcrypt.hashSync(password,10)
-                const user = new User({ email,password:hashedPassword, name, username })
+                const user = new User({ email,password:hashedPassword, name, username,country })
                 user.save(err => {
                     if (err) throw err
                     return res.status(200).json({msg:"User Register Sussecfully"})
@@ -28,7 +29,7 @@ const register = async(req,res) => {
         }
     }
 }
-const login = async (req,res) => {
+export const login = async (req,res) => {
     const { email, password } = req.body
     if (!email || !password)
     {
@@ -55,4 +56,3 @@ const login = async (req,res) => {
         }
     }
 }
-module.exports={login,register}
