@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Editor from "@monaco-editor/react";
+import Split from "react-split";
 
 let cpp = '#include<iostream>\nusing namespace std;\nint main()\n{\ncout<<"Hello World";\n}\n';
 let java = 
@@ -25,11 +26,11 @@ int main(void) {
 }`
 
 export default function Question() {
-  const [code, setcode] = useState(c);
+  const [code, setcode] = useState(cpp);
   const [lang, setlang] = useState("cpp");
   return (
-    <div class="d-flex">
-      <div style={{flex:6}}>
+    <Split class="d-flex" style={{height: 'calc(100vh - 4rem'}}>
+      <div>
         <h2>Two Sum</h2>
         <p>
           Given an array of integers nums and an integer target, return indices
@@ -62,7 +63,7 @@ export default function Question() {
             </div>
         </div>
       </div>
-      <div style={{flex:6}}>
+      <div>
         <div
           style={{
             display: "flex",
@@ -111,6 +112,6 @@ export default function Question() {
           theme={"vs-dark"}
         />
       </div>
-    </div>
+    </Split>
   );
 }
