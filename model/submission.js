@@ -7,4 +7,4 @@ const submissionModal = new Schema({
     lang: { type: String, required: true },
     source: { type: String, required: true },
 })
-module.exports = Submission = mogoose.model('submission', submissionModal)
+export const Submission = mogoose.model('submission', submissionModal)

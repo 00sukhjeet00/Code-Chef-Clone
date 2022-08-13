@@ -26,7 +26,7 @@ int main(void) {
 }`
 
 export default function Question() {
-  const [code, setcode] = useState(cpp);
+  const [code, setcode] = useState(c);
   const [lang, setlang] = useState("cpp");
   return (
     <Split class="d-flex" style={{height: 'calc(100vh - 4rem'}}>
